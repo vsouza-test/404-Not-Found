@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --font-logo: 'Inconsolata', monospace;
+    --font-body: 'Space Mono', monospace;
+    --primary-color: #333;
+    --secondary-color: #4f4f4f;
+    --tertiary-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 1em;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.nav__logo {
+    font-family: var(--font-logo);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    gap: 2em;
+}
+
+.container__item--img {
+    width: 100%;
+}
+
+.container__item.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.container__item--title {
+    font-family: var(--font-body);
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container__item--text {
+    font-family: var(--font-body);
+    color: var(--secondary-color);
+    align-self: flex-start;
+    width: 328px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.container__item--button {
+    font-family: var(--font-body);
+    font-size: 0.95em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    padding: 1em 2em;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+@media screen and (min-width: 768px) {
+    .container__item--img {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 4em 8em;
+        overflow: hidden;
+    }
+
+    .main__container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 1em;
+        padding: 4em 0;
+    }
+
+    .container__item--img {
+        width: 80%;
+    }
+
+    .container__item--title {
+        font-size: 64px;
+    }
+
+    .container__item--text {
+        font-size: 24px;
+        width: 400px;
+    }
+}
